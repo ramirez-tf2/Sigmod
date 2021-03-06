@@ -6,6 +6,8 @@ A patched-up clone of https://github.com/sigsegv-mvm/sigsegv-mvm that anyone can
 # Build Instructions
 *(Note: These instructions are intended for **Debian/Ubuntu/Linux Mint**.)*
 
+Precompiled binaries are available in the [Releases](https://github.com/ramirez-tf2/Sigmod/releases) section. If you wish to build the extension yourself, follow these instructions:
+
 1. Clone this repository (either by git or by downloading the zip).
 
 2. Navigate to this repository's folder on a bash shell and run the following commands:
