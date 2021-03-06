@@ -1,9 +1,10 @@
-# Sigmod
-A clone of https://github.com/sigsegv-mvm/sigsegv-mvm that anyone can compile and run.
-Please note that this extension only works on Linux!!!
+# Sigmod [sigsegv MvM]
+A patched-up clone of https://github.com/sigsegv-mvm/sigsegv-mvm that anyone can compile and run on their machine.
+
+**Please note that this extension only works on Linux!**
 
 # Build Instructions
-(Note: These instructions work for Debian/Ubuntu/Linux Mint.)
+*(Note: These instructions are intended for **Debian/Ubuntu/Linux Mint**.)*
 
 1. Clone this repository or download a zip of it and extract it.
 
@@ -34,6 +35,8 @@ $ cd ../build/package
 and set the cvars you want to enable in your server.cfg.
 
 # Troubleshooting
-These steps created a working binary on a blank Linux Mint 20 installation.
+These steps created a working binary on a blank Linux Mint 20 64-bit installation. If you have trouble compiling the extension on your machine, try setting up a fresh virtual machine and following the exact steps outlined here to compile the extension.
 
-The most common loading error is if you compiled against the wrong version of Sourcemod and Metamod. Make sure that your copies of the Sourcemod and Metamod source code (the "sourcemod" and "mmsource-1.10" folders in ~/sdkfolder if you ran the ambuild_setup.sh file) match the same version of Sourcemod and Metamod your server is running! If not, then switch the branch in the sourcemod/mmsource-1.10 folders (using "git switch") to the correct versions and re-run build.sh again.
+A loading error can occur if you compiled the extension against the wrong version of Sourcemod or Metamod. Make sure that your copies of the Sourcemod and Metamod source code (the "sourcemod" and "mmsource-1.10" folders in ~/sdkfolder) match the same versions your server is running! If not, then switch the branch in the sourcemod/mmsource-1.10 folders (using "git switch") to the correct versions and re-run build.sh again. (The "product.version" file has the version number.)
+
+As of writing, compiling against Sourcemod 1.10-dev and Metamod 1.11-dev on a server running SM 1.10 and MM 1.11 works properly.
