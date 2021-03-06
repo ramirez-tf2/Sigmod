@@ -153,7 +153,9 @@ namespace Mod::Pop::TFBot_Extensions
 		
 		bool suppress_timed_fetchflag = false;
 		
+#ifdef ENABLE_BROKEN_STUFF
 		bool drop_weapon = false;
+#endif
 	};
 	
 	
@@ -702,8 +704,10 @@ namespace Mod::Pop::TFBot_Extensions
 				spawners[spawner].use_melee_threat_prioritization = subkey->GetBool();
 			} else if (FStrEq(name, "SuppressTimedFetchFlag")) {
 				spawners[spawner].suppress_timed_fetchflag = subkey->GetBool();
+#ifdef ENABLE_BROKEN_STUFF
 			} else if (FStrEq(name, "DropWeapon")) {
 				spawners[spawner].drop_weapon = subkey->GetBool();
+#endif
 			} else {
 				del = false;
 			}
@@ -1417,6 +1421,7 @@ namespace Mod::Pop::TFBot_Extensions
 	}
 	
 	
+#ifdef ENABLE_BROKEN_STUFF
 	DETOUR_DECL_MEMBER(bool, CTFPlayer_ShouldDropAmmoPack)
 	{
 		auto player = reinterpret_cast<CTFPlayer *>(this);
@@ -1467,6 +1472,7 @@ namespace Mod::Pop::TFBot_Extensions
 		
 		return result;
 	}
+#endif
 	
 	
 	class CMod : public IMod, public IModCallbackListener
@@ -1510,10 +1516,12 @@ namespace Mod::Pop::TFBot_Extensions
 			
 			MOD_ADD_DETOUR_MEMBER(CTFBotMainAction_SelectMoreDangerousThreatInternal, "CTFBotMainAction::SelectMoreDangerousThreatInternal");
 			
+#ifdef ENABLE_BROKEN_STUFF
 			MOD_ADD_DETOUR_MEMBER(CTFPlayer_ShouldDropAmmoPack, "CTFPlayer::ShouldDropAmmoPack");
 			MOD_ADD_DETOUR_MEMBER(CTFPlayer_DropAmmoPack,       "CTFPlayer::DropAmmoPack");
 			MOD_ADD_DETOUR_STATIC(CTFDroppedWeapon_Create,      "CTFDroppedWeapon::Create");
 			MOD_ADD_DETOUR_STATIC(CTFAmmoPack_Create,           "CTFAmmoPack::Create");
+#endif
 			
 			// TEST! REMOVE ME!
 //			MOD_ADD_DETOUR_MEMBER(CTFPlayer_GetOverrideStepSound, "CTFPlayer::GetOverrideStepSound");
