@@ -33,6 +33,6 @@ Set the cvars of the features you want to enable onto your server.cfg.
 # Troubleshooting
 These steps created a working binary on a blank Linux Mint 20 64-bit installation. If you have trouble compiling the extension on your machine, try setting up a fresh virtual machine and following the exact steps outlined here to compile the extension.
 
-A loading error can occur if you compiled the extension against the wrong version of Sourcemod or Metamod. Make sure that your copies of the Sourcemod and Metamod source code (the "sourcemod" and "mmsource-1.10" folders in ~/sdkfolder) match the same versions your server is running! If not, then switch the branch in the sourcemod/mmsource-1.10 folders to the correct versions and re-run build.sh again. (The SM/MM version is in the "product.version" file.)
+A loading error can occur if you compiled the extension against the wrong version of Sourcemod or Metamod. Make sure that your copies of the Sourcemod and Metamod source code (the "sourcemod" and "mmsource-1.10" folders in ~/sdkfolder) match the same versions your server is running! If not, then switch the branch in the SM/MM folders to the correct versions and re-run build.sh again. (The version number is in the "product.version" file.)
 
 As of writing, compiling against Sourcemod 1.10-dev and Metamod 1.11-dev on a server running SM 1.10 and MM 1.11 works properly.
