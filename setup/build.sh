@@ -26,5 +26,8 @@ CC=gcc CXX=g++ python3 ../configure.py --hl2sdk-root="$SDK_LOCATION" --sm-path="
 #Then start the build:
 ambuild
 
+#Inside the addons/sourcemod/extensions folder, create a blank .autoload file so that the extension will always load with Sourcemod:
+touch package/addons/sourcemod/extensions/sigsegv.autoload
+
 #Done!
 echo Completed running the build process.
