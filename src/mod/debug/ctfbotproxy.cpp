@@ -87,7 +87,7 @@ class IMapEntityFilter {};
 class CTFBotProxy : public CBaseEntity {};
 
 
-namespace Mod::Debug::CTFBotProxy
+namespace Mod::Debug::CTFBotProxy_
 {
 	const char *MakeEscapedVersion(const char *str)
 	{

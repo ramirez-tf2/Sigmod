@@ -42,9 +42,10 @@ class CTFBaseRocket  : public CBaseProjectile
 {
 public:
 	CBasePlayer *GetOwnerPlayer() const { return ft_GetOwnerPlayer(this); }
+
+	DECL_SENDPROP(Vector,               m_vInitialVelocity);
 	
 private:
-	DECL_SENDPROP(Vector,               m_vInitialVelocity);
 	DECL_SENDPROP(int,                  m_iDeflected);
 	DECL_SENDPROP(CHandle<CBaseEntity>, m_hLauncher);
 	
@@ -96,9 +97,10 @@ public:
 	void SetCritical(bool bCritical) { this->m_bCritical = bCritical; }
 	
 	int GetWeaponID() const { return vt_GetWeaponID(this); }
+
+	DECL_SENDPROP(Vector,               m_vInitialVelocity);
 	
 private:
-	DECL_SENDPROP(Vector,               m_vInitialVelocity);
 	DECL_SENDPROP(int,                  m_iDeflected);
 	DECL_SENDPROP(CHandle<CBaseEntity>, m_hDeflectOwner);
 	DECL_SENDPROP(bool,                 m_bCritical);

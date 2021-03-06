@@ -63,7 +63,7 @@ SIZE_CHECK(NextBotManager,             0x0050);
 
 #warning REMOVE THIS CRAP PLEASE
 /* NextBotKnownEntity.cpp */
-//inline CKnownEntity::~CKnownEntity() {}
+inline CKnownEntity::~CKnownEntity() {}
 
 /* NextBotContextualQueryInterface.cpp */
 //inline IContextualQuery::~IContextualQuery() {}
