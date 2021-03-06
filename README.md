@@ -6,7 +6,7 @@ A patched-up clone of https://github.com/sigsegv-mvm/sigsegv-mvm that anyone can
 # Build Instructions
 *(Note: These instructions are intended for **Debian/Ubuntu/Linux Mint**.)*
 
-1. Clone this repository or download a zip of it and extract it.
+1. Clone this repository (either by git or by downloading the zip).
 
 2. Navigate to this repository's folder on a bash shell and run the following commands:
 
@@ -22,13 +22,11 @@ $ sh build.sh
 $ cd ../build/package
 ```
 
-3. Copy everything in here (in ./build/package) to your server's /tf/ folder.
+3. Merge & copy everything in here (in `./build/package`) into your server's `/tf/` folder.
 
-4. Start your server. Run the following command on your srcds console to print out all the available cvars:
+4. Copy `srcds_packages.sh` from the `/setup` folder to somewhere in your server and run it. When it's finished, delete the .sh file.
 
-`find sig_`
-
-Set the cvars of the features you want to enable onto your server.cfg.
+5. Start your server. Run `find sig_` on your srcds console to print out all the available cvars. Set the cvars of the features you want to enable in your server.cfg.
 
 # Troubleshooting
 These steps created a working binary on a blank Linux Mint 20 64-bit installation. If you have trouble compiling the extension on your machine, try setting up a fresh virtual machine and following the exact steps outlined here to compile the extension.
