@@ -1,0 +1,24 @@
+// NextBotBodyInterface
+
+"Games"
+{
+	"#default"
+	{
+		"#supported"
+		{
+			engine "tf2"
+		}
+		
+		"sigsegv"
+		{
+			"addrs"
+			{
+				"IBody::Update"
+				{
+					type "sym"
+					sym  "_ZN5IBody6UpdateEv"
+				}
+			}
+		}
+	}
+}

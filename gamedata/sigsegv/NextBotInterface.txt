@@ -1,0 +1,29 @@
+// NextBotInterface
+
+"Games"
+{
+	"#default"
+	{
+		"#supported"
+		{
+			engine "tf2"
+		}
+		
+		"sigsegv"
+		{
+			"addrs"
+			{
+				"INextBot::Update"
+				{
+					type "sym"
+					sym  "_ZN8INextBot6UpdateEv"
+				}
+				"INextBot::DisplayDebugText"
+				{
+					type "sym"
+					sym  "_ZNK8INextBot16DisplayDebugTextEPKc"
+				}
+			}
+		}
+	}
+}
